@@ -1,0 +1,32 @@
+{
+    "users":[
+        {
+            "id":"1",
+            "name":"felipe",
+            "email":"felipe@test.com",
+            "password":"123",
+            "role":"admin",
+            "isActive":true
+            
+        },
+        {
+            "id":"2",
+            "name":"luis",
+            "email":"luis@test.com",
+            "password":"123",
+            "role":"tech",
+            "isActive":true
+            
+        },
+        {
+            "id":"3",
+            "name":"mateo",
+            "email":"mateo@test.com",
+            "password":"123",
+            "role":"client",
+            "isActive":true
+            
+        }
+
+    ]
+}

@@ -25,11 +25,11 @@ function startInactivityTimer(){
     inactivityTimer = setTimeout(() => {
         clearSession()
         window.location.hash = '#/login'
-        alert('TU sesión expiro por inactividad')
+        alert('Tu sesión expiro por inactividad')
     }, TIMEOUT_DURATION)
 }
 
-export function resetINactivityTimer(){
+export function resetInactivityTimer(){
  if (getSession()){
     startInactivityTimer()
  }   
