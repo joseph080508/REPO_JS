@@ -1,0 +1,3 @@
+VITE_DATA_API_URL=http://localhost:3001
+VITE_DATA_API_URL=http://localhost:3002
+VITE_TIMEOUT= 5000
