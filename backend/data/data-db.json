@@ -1,13 +1,22 @@
 {
-    "tickets":[
+    "tickets": [
         {
-            "id":"1",
-            "title":"vjfjvfjnvfj",
-            "userId":"1",
-            "status":"closed",
-            "description":"un4utnu",
-            "createdAt":"fmibr",
-            "updatedAt":"vnverig"
+            "id": 1,
+            "ticketName": "Billing System Access Error",
+            "caseType": "incident",
+            "description": "The user cannot log in to the billing system due to an authentication error.",
+            "assignedTechnician": "Carlos Gomez",
+            "createdByUserId": 101,
+            "requestingClient": "Maria Rodriguez"
+        },
+        {
+            "id": 2,
+            "ticketName": "New User Creation Request",
+            "caseType": "request",
+            "description": "A new user account is requested for a recently hired employee.",
+            "assignedTechnician": "Ana Martinez",
+            "createdByUserId": 102,
+            "requestingClient": "Juan Perez"
         }
     ]
 }

@@ -1,7 +1,9 @@
 import { loginEvent, renderLogin } from "../pages/login.js";
+import { renderAdmin } from "../pages/admin.js";
 
 const Routes ={
-    "/": {view:renderLogin, vewEvent:loginEvent}
+    "/": {view:renderLogin, vewEvent:loginEvent},
+    "/dashboard/admin":{view:renderAdmin}
 }
 
 
@@ -10,6 +12,8 @@ export async function router() {
     const path = window.location.pathname;
     // Busca render
     const render = Routes[path];
+    console.log(render);
+    
     if (render) {
         await render.view();
         await render.vewEvent?.();

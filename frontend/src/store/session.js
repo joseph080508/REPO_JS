@@ -1,4 +1,6 @@
-const TIMEOUT_DURATION = 300000
+import { navigateTo } from "../main.js"
+
+const TIMEOUT_DURATION = 3000000
 let inactivityTimer = null
 
 //Guardar el usuario que inicia sesión el LS
@@ -24,8 +26,9 @@ function startInactivityTimer(){
     clearTimeout(inactivityTimer)
     inactivityTimer = setTimeout(() => {
         clearSession()
-        window.location.hash = '#/login'
+        navigateTo("/")
         alert('Tu sesión expiro por inactividad')
+
     }, TIMEOUT_DURATION)
 }
 

@@ -1,6 +1,8 @@
 export async function loadHTML(path) {
 
     try {
+        console.log(path);
+        
         const response = await fetch(path);
         if (!response.ok) {
             throw new Error(`Error cargando HTML: ${path}`);
