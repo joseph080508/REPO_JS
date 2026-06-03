@@ -1,8 +1,15 @@
- 
-const auth = {
-    url:import.meta.env.VITE_URLAUTH,
+import { authClient } from "../utils/https.js"
+import { saveSession } from "./session.js";
 
-    async onLogin(){
-        const res = await fetch(`${this.url}/users?email=`)
+ 
+export const auth = {
+    async onLogin(email, password){
+        const res = await authClient.get(`/users?email=${email}&password=${password}`)
+        if(!res.data[0]){
+          document.getElementById('error-msg').style.display = 'block'
+         return
+        }else{
+            saveSession(res.data[0])
+        }
     }
 }
