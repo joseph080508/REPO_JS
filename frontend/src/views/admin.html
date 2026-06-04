@@ -1,124 +1,123 @@
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="admin-crown"><i class="fa-solid fa-crown" style="font-size:11px"></i> ADMINISTRATOR</div>
+  <div class="aside-topbar">
+    <button class="btn-new">+ Create ticket</button>
 
-  <!-- TOPBAR -->
-  <div class="topbar">
-    <div class="admin-crown"><i class="fa-solid fa-crown" style="font-size:11px"></i> ADMINISTRATOR</div>
-    <div class="aside-topbar">
-       <button class="btn-new">+ Create ticket</button>
+    <div class="links-pill" id="btn-logout"><i class="fa-solid fa-link"></i> Log Out</div>
 
-    <div class="links-pill"><i class="fa-solid fa-link"></i> Log Out</div>
 
     <div class="topbar-avatar"><img src="https://i.pravatar.cc/60?img=11" alt="Admin"></div>
+  </div>
+</div>
+
+<!-- KPIs -->
+<div class="kpis">
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--red)">3</div>
+    <div class="kpi-label">Esperando por mí</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--orange)">6</div>
+    <div class="kpi-label">Asignados a mí</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--blue)">2</div>
+    <div class="kpi-label">Aprobaciones</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--yellow)">2</div>
+    <div class="kpi-label">Tareas</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--purple)">0</div>
+    <div class="kpi-label">Sin asignar</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--green)">✓</div>
+    <div class="kpi-label">Colaboraciones</div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-area">
+
+  <!-- TICKET TABLE -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Tickets</span>
+      <div class="search-small">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Buscar...">
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Application</th>
+            <th>Applicant</th>
+            <th>Technician</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
     </div>
   </div>
 
-  <!-- KPIs -->
-  <div class="kpis">
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--red)">3</div>
-      <div class="kpi-label">Esperando por mí</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--orange)">6</div>
-      <div class="kpi-label">Asignados a mí</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--blue)">2</div>
-      <div class="kpi-label">Aprobaciones</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--yellow)">2</div>
-      <div class="kpi-label">Tareas</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--purple)">0</div>
-      <div class="kpi-label">Sin asignar</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--green)">✓</div>
-      <div class="kpi-label">Colaboraciones</div>
-    </div>
-  </div>
+  <!-- SIDE PANEL -->
+  <div class="side-panel">
 
-  <!-- CONTENT -->
-  <div class="content-area">
+    <!-- TECHNICAL USERS -->
+    <div class="mini-card" style="flex:1; overflow:hidden; display:flex; flex-direction:column;">
+      <div class="mini-card-title"><i class="fa-solid fa-users"></i> Técnicos activos</div>
+      <div style="overflow-y:auto; flex:1;">
 
-    <!-- TICKET TABLE -->
-    <div class="panel">
-      <div class="panel-header">
-        <span class="panel-title">Tickets</span>
-        <div class="search-small">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Buscar...">
+        <div class="tech-list-item">
+          <img src="https://i.pravatar.cc/50?img=5" alt="">
+          <div class="tech-info">
+            <div class="tname">D. Coverdale</div>
+            <div class="trole">Soporte L2</div>
+          </div>
+          <span class="tech-count">3</span>
         </div>
-      </div>
 
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Application</th>
-              <th>Applicant</th>
-              <th>Technician</th>
-              <th>Priority</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="tbody">
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- SIDE PANEL -->
-    <div class="side-panel">
-
-      <!-- TECHNICAL USERS -->
-      <div class="mini-card" style="flex:1; overflow:hidden; display:flex; flex-direction:column;">
-        <div class="mini-card-title"><i class="fa-solid fa-users"></i> Técnicos activos</div>
-        <div style="overflow-y:auto; flex:1;">
-
-          <div class="tech-list-item">
-            <img src="https://i.pravatar.cc/50?img=5" alt="">
-            <div class="tech-info">
-              <div class="tname">D. Coverdale</div>
-              <div class="trole">Soporte L2</div>
-            </div>
-            <span class="tech-count">3</span>
+        <div class="tech-list-item">
+          <img src="https://i.pravatar.cc/50?img=7" alt="">
+          <div class="tech-info">
+            <div class="tname">S. Soprano</div>
+            <div class="trole">Soporte L1</div>
           </div>
-
-          <div class="tech-list-item">
-            <img src="https://i.pravatar.cc/50?img=7" alt="">
-            <div class="tech-info">
-              <div class="tname">S. Soprano</div>
-              <div class="trole">Soporte L1</div>
-            </div>
-            <span class="tech-count">1</span>
-          </div>
-
-          <div class="tech-list-item">
-            <img src="https://i.pravatar.cc/50?img=14" alt="">
-            <div class="tech-info">
-              <div class="tname">R. Plant</div>
-              <div class="trole">Soporte L1</div>
-            </div>
-            <span class="tech-count">2</span>
-          </div>
-
-          <div class="tech-list-item">
-            <img src="https://i.pravatar.cc/50?img=19" alt="">
-            <div class="tech-info">
-              <div class="tname">J. Bonham</div>
-              <div class="trole">IT Specialist</div>
-            </div>
-            <span class="tech-count">0</span>
-          </div>
-
+          <span class="tech-count">1</span>
         </div>
+
+        <div class="tech-list-item">
+          <img src="https://i.pravatar.cc/50?img=14" alt="">
+          <div class="tech-info">
+            <div class="tname">R. Plant</div>
+            <div class="trole">Soporte L1</div>
+          </div>
+          <span class="tech-count">2</span>
+        </div>
+
+        <div class="tech-list-item">
+          <img src="https://i.pravatar.cc/50?img=19" alt="">
+          <div class="tech-info">
+            <div class="tname">J. Bonham</div>
+            <div class="trole">IT Specialist</div>
+          </div>
+          <span class="tech-count">0</span>
+        </div>
+
       </div>
     </div>
-
   </div>
 
+</div>

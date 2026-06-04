@@ -1,28 +1,6 @@
 {
   "tickets": [
     {
-      "id": "1",
-      "ticketName": "Billing System Access Error",
-      "caseType": "incident",
-      "description": "The user cannot log in to the billing system due to an authentication error.",
-      "priority": "imperative",
-      "status": "In Progress",
-      "Technician": "luis",
-      "UserId": 1,
-      "requestingClient": "Maria Rodriguez"
-    },
-    {
-      "id": "2",
-      "ticketName": "New User Creation Request",
-      "caseType": "request",
-      "description": "A new user account is requested for a recently hired employee.",
-      "priority": "medium",
-      "status": "In Progress",
-      "Technician": "Ana Martinez",
-      "UserId": 2,
-      "requestingClient": "Juan Perez"
-    },
-    {
       "id": "3",
       "ticketName": "VPN Connection Problem",
       "caseType": "support",
@@ -98,6 +76,17 @@
       "UserId": "1",
       "requestingClient": "felipe",
       "id": "gVMsmz-NSZo"
+    },
+    {
+      "ticketName": "asdasd",
+      "description": "asdasdasd",
+      "priority": "Medium",
+      "caseType": "dasdasdasd",
+      "Technician": "",
+      "status": "In Progress",
+      "UserId": "1",
+      "requestingClient": "felipe",
+      "id": "TRsS9T3BXkY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
