@@ -1,11 +1,11 @@
 import { getTickets } from "../services/api.js";
 import { loadHTML } from "../utils/loadHtml.js";
-import {ticketTr} from "../components/ticketTr.js"
+import { ticketTr } from "../components/ticketTr.js";
 import { initModalTicket } from "../components/modalTIckets.js";
 import { initModalTicketTech } from "../components/modaladdTech.js";
 import { addTech } from "../components/tecnicos.js";
-import { deleteTicket } from "../services/api.js";
-
+import { renderTechPanel } from "../components/apartadodeTecnicos.js";
+import { clearSession } from "../store/session";
 
 export async function renderAdmin(){
     const container = document.getElementById("app");
@@ -14,12 +14,15 @@ export async function renderAdmin(){
     await initModalTicket(renderTicketsToAdmin)
     attachDelete()
     await initModalTicketTech()
+    await renderTechPanel();
+    attachLogout();
 }
 
 export async function renderTicketsToAdmin() {
-    const container = document.getElementById("tbody")
+    const container = document.getElementById("tbody");
     const tickets = await getTickets();
     container.innerHTML = tickets.map(ticket => ticketTr(ticket)).join('');
+    await renderTechPanel();
 }
 
 function attachDelete() {
@@ -40,10 +43,19 @@ async function oneDeleteClick(event) {
 
     try {
         await deleteTicket(id);
-        await renderTickets();
+        await renderTicketsToAdmin();
         alert("Ticket deleted successfully.");
     } catch (error) {
         console.error(error);
         alert("Error deleting the ticket.");
     }
+}
+
+function attachLogout() {
+    const logoutButton = document.querySelector(".links-pill");
+    if (!logoutButton) return;
+
+    logoutButton.addEventListener("click", () => {
+        clearSession();
+    });
 }

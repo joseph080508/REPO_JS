@@ -1,6 +1,6 @@
 import { navigateTo } from "../main.js"
 
-const TIMEOUT_DURATION = 3000000
+const TIMEOUT_DURATION = 300000
 let inactivityTimer = null
 
 //Guardar el usuario que inicia sesión el LS
@@ -21,6 +21,7 @@ export function clearSession(){
     localStorage.removeItem('user')
     clearTimeout(inactivityTimer)
     navigateTo("/")
+
 }
 
 function startInactivityTimer(){

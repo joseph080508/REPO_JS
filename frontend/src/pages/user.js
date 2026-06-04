@@ -2,16 +2,27 @@ import { initModalTicket } from "../components/modalTIckets.js";
 import { ticketCard } from "../components/ticketCard.js";
 import { getTickets } from "../services/api.js";
 import { loadHTML } from "../utils/loadHtml.js";
+import { clearSession } from "../store/session.js";
 
-export async function renderUser(){
+export async function renderUser() {
     const container = document.getElementById("app");
     container.innerHTML = await loadHTML('/src/views/user.html');
     renderTickets()
     await initModalTicket(renderTickets)
-  
+    initLogout()
 }
 
-async function renderTickets() {
+function initLogout() {
+    const logoutButton = document.getElementById("btn-logout");
+
+    if (logoutButton) {
+        logoutButton.addEventListener("click", () => {
+            clearSession();
+        });
+    }
+}
+
+export async function renderTickets() {
     const container = document.getElementById("tickets")
     const user = JSON.parse(localStorage.getItem("user"))
     const tickets = await getTickets();
