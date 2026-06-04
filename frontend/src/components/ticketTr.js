@@ -25,7 +25,7 @@ export function ticketTr(ticket) {
               <td><span class="badge badge-orange"><span class="status-dot" style="background:var(--orange)"></span>${ticket.status}</span></td>
               <td>
                 <div class="action-btns">
-                  <button class="action-btn edit" title="Editar">${iconSVG(Pencil)}  </button>
+                  <button class="action-btn edit" data-ticket-id="${ticket.id}" title="Editar">${iconSVG(Pencil)}  </button>
                   <button class="action-btn assign" data-ticket-id="${ticket.id}" title="Asignar técnico">${iconSVG(UserRoundPlus)}</button>
                   <button class="action-btn del" title="Eliminar" data-id=${ticket.id}>${iconSVG(Trash2)}  </button>
                 </div>
