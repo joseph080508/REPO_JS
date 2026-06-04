@@ -35,7 +35,7 @@ export async function initModalTicket(refreshTickets) {
     }
     
     await postTicket(ticket)
-    await renderTicketsToAdmin()
+    await refreshTickets()
     modal.close()
 
   })

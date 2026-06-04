@@ -11,7 +11,7 @@ export async function renderAdmin(){
     const container = document.getElementById("app");
     container.innerHTML = await loadHTML('/src/views/admin.html');
     renderTicketsToAdmin()
-    await initModalTicket()
+    await initModalTicket(renderTicketsToAdmin)
     attachDelete()
     await initModalTicketTech()
 }
@@ -40,7 +40,7 @@ async function oneDeleteClick(event) {
 
     try {
         await deleteTicket(id);
-        await renderTickets();
+        await renderTicketsToAdmin();
         alert("Ticket deleted successfully.");
     } catch (error) {
         console.error(error);

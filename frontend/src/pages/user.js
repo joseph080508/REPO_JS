@@ -7,10 +7,11 @@ export async function renderUser(){
     const container = document.getElementById("app");
     container.innerHTML = await loadHTML('/src/views/user.html');
     renderTickets()
-  
+    initModalTicket(renderTickets)
+    
 }
 
-async function renderTickets() {
+export async function renderTickets() {
     const container = document.getElementById("tickets")
     const user = JSON.parse(localStorage.getItem("user"))
     const tickets = await getTicketsById(user.id);   
