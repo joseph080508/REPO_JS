@@ -1,5 +1,6 @@
 import { navigateTo } from "../main.js";
 
+// Redirige al dashboard correcto segun el rol autenticado.
 export function rolView(rol) {
     switch (rol) {
         case "admin":

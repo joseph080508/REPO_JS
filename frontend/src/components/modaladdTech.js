@@ -4,6 +4,7 @@ import { addTech } from "./tecnicos.js";
 import { renderTicketsToAdmin } from "../pages/admin.js";
 
 
+// Inicializa el modal que asigna un tecnico a un ticket.
 export async function initModalTicketTech() {
   // Inyecta el HTML del modal solo si no existe ya en el DOM
   if (!document.getElementById('modal-tech')) {
@@ -20,6 +21,7 @@ export async function initModalTicketTech() {
   // Event delegation para todos los botones .assign
   document.addEventListener('click', async (e) => {
     if (e.target.closest('.assign')) {
+      // Guarda el ticket que recibira el tecnico seleccionado.
       ticketIdActual = e.target.closest('.assign').dataset.ticketId;
       await loadTecnicos();
       modal.showModal();
@@ -28,6 +30,7 @@ export async function initModalTicketTech() {
   btnClose .addEventListener('click', () => modal.close());
   btnCancel.addEventListener('click', () => modal.close());
 
+  // Envia la asignacion al backend y refresca la tabla admin.
   formTech.addEventListener('submit', async (e) => {
     e.preventDefault();
     const techId = document.getElementById('tecnicos').value;
@@ -44,6 +47,7 @@ export async function initModalTicketTech() {
     }
   });
 
+  // Carga los usuarios con rol tech y los pinta como options del select.
   async function loadTecnicos() {
     try {
       const tecnicos = await getUsuarios('tech');

@@ -1,5 +1,6 @@
 import { loadTechStats } from "./logicadeTecnicos.js";
 
+// Pinta el panel lateral con tecnicos activos y cantidad de tickets asignados.
 export async function renderTechPanel() {
   const container = document.getElementById('table-tech');
   if (!container) return;
@@ -10,6 +11,7 @@ export async function renderTechPanel() {
     || '<div class="tech-list-item">No hay técnicos activos</div>';
 }
 
+// Renderiza una fila visual del panel de tecnicos.
 function renderTechItem(tech) {
     
   return `

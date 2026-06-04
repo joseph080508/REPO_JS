@@ -1,16 +1,12 @@
 import axios from 'axios';
 
-/**
- * URL API desde variables de entorno
- * import.meta.env es soportado por Vite
- */
+// Lee las URLs y configuracion HTTP desde variables de entorno de Vite.
 const API_AUTHURL = import.meta.env.VITE_AUTH_API_URL;
 const API_DATAURL = import.meta.env.VITE_DATA_API_URL;
 const CONTENT_TYPE = import.meta.env.VITE_CONTENT_TYPE;
 const TIME_OUT = import.meta.env.VITE_TIME_OUT;
-/**
- * Instancia 1 de axios para Autenticación
- */
+
+// Cliente axios para autenticacion y usuarios.
 export const authClient = axios.create({
     baseURL: API_AUTHURL,
     timeout: TIME_OUT,
@@ -19,9 +15,7 @@ export const authClient = axios.create({
     }
 });
 
-/**
- * Instancia 2 de axios para Datos de la aplicación
- */
+// Cliente axios para tickets y datos de la aplicacion.
 export const dataClient = axios.create({
     baseURL: API_DATAURL,
     timeout: TIME_OUT,

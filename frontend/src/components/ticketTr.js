@@ -1,7 +1,9 @@
 import { createElement, Pencil, UserRoundPlus, Trash2 } from "lucide";
 
+// Convierte iconos de lucide en SVG para usarlos dentro de botones.
 const iconSVG = (icon, attrs = {}) => createElement(icon, attrs).outerHTML;
 
+// Renderiza una fila de la tabla de tickets del administrador.
 export function ticketTr(ticket) {
     return `<tr>
               <td><span class="ticket-id">tk${ticket.id}</span></td>

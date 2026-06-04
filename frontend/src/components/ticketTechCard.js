@@ -1,7 +1,9 @@
 import { createElement, Pencil } from "lucide";
 
+// Convierte un icono de lucide en SVG listo para insertar en HTML string.
 const iconSVG = (icon, attrs = {}) => createElement(icon, attrs).outerHTML;
 
+// Renderiza una tarjeta de ticket para la vista de tecnico.
 export function ticketTechCard(ticket) {
     return `<article class="ticket-card">
             <header class="card-header">

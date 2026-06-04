@@ -1,6 +1,7 @@
 import { getTicketById, postTicket, updateTicket } from "../services/api.js";
 import { loadHTML } from "../utils/loadHtml.js";
 
+// Inicializa el modal de crear/editar tickets y recibe un callback para refrescar la vista.
 export async function initModalTicket(refreshTickets) {
   // Inyecta el HTML del modal solo si no existe ya en el DOM
   if (!document.getElementById('modal-ticket')) {
@@ -12,19 +13,26 @@ export async function initModalTicket(refreshTickets) {
   const btnNew    = document.querySelector('.btn-new');
   const btnClose  = document.getElementById('modal-close');
   const btnCancel = document.getElementById('btn-cancel');
+  const modalTitle = document.getElementById('ticket-modal-title');
+  const btnSubmit = document.getElementById('ticket-submit');
   const form = document.getElementById("form-ticket");
   let ticketIdActual = null;
 
+  // Abre el modal en modo crear.
   btnNew   .addEventListener('click', () => {
     const user = JSON.parse(localStorage.getItem("user"))
     const statusSelect = document.getElementById("ticket-status");
 
     ticketIdActual = null;
     form.reset();
+    modalTitle.textContent = "New Ticket";
+    btnSubmit.textContent = "Create a Ticket";
     statusSelect.value = "In Progress";
     showStatusByRole(user);
     modal.showModal();
   });
+
+  // Cierra el modal y limpia el modo edicion.
   btnClose .addEventListener('click', () => {
     ticketIdActual = null;
     modal.close();
@@ -34,6 +42,7 @@ export async function initModalTicket(refreshTickets) {
     modal.close();
   });
 
+  // Abre el modal en modo editar cuando se presiona un boton .edit.
   document.addEventListener('click', async (e) => {
     if (e.target.closest('.edit')) {
       const user = JSON.parse(localStorage.getItem("user"))
@@ -42,6 +51,7 @@ export async function initModalTicket(refreshTickets) {
       const statusSelect = document.getElementById("ticket-status");
 
       if (!canEditTicket(user, ticket)) {
+        // Si el usuario no tiene permiso, no se abre el modal.
         ticketIdActual = null;
         return;
       }
@@ -50,6 +60,8 @@ export async function initModalTicket(refreshTickets) {
       document.getElementById("ticket-desc").value = ticket.description;
       document.getElementById("ticket-prioridad").value = ticket.priority;
       document.getElementById("ticket-type").value = ticket.caseType;
+      modalTitle.textContent = "Update Ticket";
+      btnSubmit.textContent = "Update Ticket";
       statusSelect.value = ticket.status;
       showStatusByRole(user);
 
@@ -57,6 +69,7 @@ export async function initModalTicket(refreshTickets) {
     }
   });
 
+  // Decide si el formulario crea un ticket nuevo o actualiza uno existente.
   form.onsubmit = async (e)=>{
     e.preventDefault()
     const user = JSON.parse(localStorage.getItem("user"))
@@ -72,10 +85,12 @@ export async function initModalTicket(refreshTickets) {
     }
 
     if (user.role !== "client") {
+      // Admin y tecnico pueden definir estado desde el modal.
       ticket.status = document.getElementById("ticket-status").value
     }
 
     if (ticketIdActual) {
+      // Si hay ticketIdActual, el formulario esta en modo actualizacion.
       await updateTicket(ticketIdActual, ticket)
       if (refreshTickets) {
         await refreshTickets()
@@ -86,6 +101,7 @@ export async function initModalTicket(refreshTickets) {
     }
     
     if (user.role === "client") {
+      // Los clientes siempre crean tickets en progreso.
       ticket.status = "In Progress"
     }
 
@@ -98,21 +114,23 @@ export async function initModalTicket(refreshTickets) {
   }
 }
 
+// Define permisos para editar segun rol, propiedad del ticket y estado.
 function canEditTicket(user, ticket) {
   const isOwner = ticket.UserId == user.id;
-  const isClosed = ticket.status === "closed" || ticket.status === "cerrado" || ticket.status === "Solved" || ticket.status === "Solucionado";
+  const isClosed = ticket.status === "closed" || ticket.status === "Solved" ;
 
   if (user.role === "admin") {
     return true;
   }
 
   if (user.role === "tech") {
-    return isOwner;
+    return true;
   }
 
   return isOwner && (!ticket.Technician || isClosed);
 }
 
+// Muestra u oculta el campo status segun el rol del usuario.
 function showStatusByRole(user) {
   const statusGroup = document.getElementById("ticket-status-group");
   const statusSelect = document.getElementById("ticket-status");
