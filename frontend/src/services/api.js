@@ -22,3 +22,14 @@ export async function getTicketsById(id) {
         return [];
     }
 }
+
+export async function postTicket(ticket) {
+      try {
+        const response = await dataClient.post(`/tickets`,ticket);
+        return response.data|| [];
+
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}

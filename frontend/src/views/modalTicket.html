@@ -12,25 +12,25 @@
     <form class="modal-form" id="form-ticket">
 
       <fieldset class="form-group">
-        <label for="ticket-titulo">Title</label>
-        <input type="text" id="ticket-titulo" placeholder="Enter the ticket title" required>
+        <label for="ticket-title">Title</label>
+        <input type="text" id="ticket-title" placeholder="Enter the ticket title" required>
       </fieldset>
 
       <fieldset class="form-group">
         <label for="ticket-desc">Description</label>
-        <textarea id="ticket-desc" rows="4" placeholder="Describe the problem or request"></textarea>
+        <textarea id="ticket-desc" rows="4" placeholder="Describe the problem or request" required></textarea>
       </fieldset>
 
       <div class="form-row">
 
         <fieldset class="form-group">
           <label for="ticket-prioridad">Priority</label>
-          <select id="ticket-prioridad">
+          <select id="ticket-prioridad" value="">
             <option value="">Select...</option>
-            <option value="urgente">Imperative</option>
-            <option value="alta">high</option>
-            <option value="media">Medium</option>
-            <option value="baja">Low</option>
+            <option value="Imperative">Imperative</option>
+            <option value="high">high</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
           </select>
         </fieldset>
 

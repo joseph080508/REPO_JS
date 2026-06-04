@@ -7,9 +7,7 @@ export async function renderUser(){
     const container = document.getElementById("app");
     container.innerHTML = await loadHTML('/src/views/user.html');
     renderTickets()
-    await initModalTicket();
-    const form = document.getElementById("form-ticket")
-    console.log(form)
+  
 }
 
 async function renderTickets() {
