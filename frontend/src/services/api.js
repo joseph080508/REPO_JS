@@ -56,6 +56,36 @@ export async function updateTicketTech(ticketId, techId) {
         throw error;
     }
 }
+
+
+// EDIT
+export async function getTicketById(ticketId) {
+    try {
+        const response = await dataClient.get(`/tickets/${ticketId}`);
+        return response.data;
+    } catch (error) {
+        console.error('Error obteniendo ticket:', error);
+        throw error;
+    }
+}
+
+export async function updateTicket(ticketId, newTicketData) {
+    try {
+        const ticketResponse = await dataClient.get(`/tickets/${ticketId}`);
+        const ticketData = ticketResponse.data;
+
+        ticketData.ticketName = newTicketData.ticketName;
+        ticketData.description = newTicketData.description;
+        ticketData.priority = newTicketData.priority;
+        ticketData.caseType = newTicketData.caseType;
+        
+        const response = await dataClient.put(`/tickets/${ticketId}`, ticketData);
+        return response.data;
+    } catch (error) {
+        console.error('Error actualizando ticket:', error);
+        throw error;
+    }
+}
 // ELIMINAR
 export async function deleteTicket(id) {
     try {
