@@ -25,7 +25,7 @@ export function ticketTr(ticket) {
                 <div class="action-btns">
                   <button class="action-btn edit" title="Editar"><i data-lucide="pencil"></i>  </button>
                   <button class="action-btn assign" title="Asignar técnico"><i data-lucide="user-round-plus"></i></button>
-                  <button class="action-btn del" title="Eliminar"><i data-lucide="trash-2"></i></i>  </button>
+                  <button class="action-btn del" title="Eliminar" data-id="${ticket.id}"><i data-lucide="trash-2"></i></i>  </button>
                 </div>
               </td>
             </tr>`

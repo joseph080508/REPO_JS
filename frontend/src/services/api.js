@@ -22,3 +22,14 @@ export async function getTicketsById(id) {
         return [];
     }
 }
+
+// ELIMINAR
+export async function deleteTicket(id) {
+    try {
+        const response = await dataClient.delete(`/tickets/${id}`);
+        return response.data;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+} 
