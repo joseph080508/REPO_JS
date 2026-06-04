@@ -40,10 +40,19 @@ async function oneDeleteClick(event) {
 
     try {
         await deleteTicket(id);
-        await renderTickets();
+        await  renderTicketsToAdmin();
         alert("Ticket deleted successfully.");
     } catch (error) {
         console.error(error);
         alert("Error deleting the ticket.");
     }
+}
+
+function attachLogout() {
+    const logoutButton = document.querySelector(".links-pill");
+    if (!logoutButton) return;
+
+    logoutButton.addEventListener("click", () => {
+        clearSession();
+    });
 }

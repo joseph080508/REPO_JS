@@ -1,76 +1,78 @@
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="admin-crown"><i class="fa-solid fa-crown" style="font-size:11px"></i> ADMINISTRATOR</div>
+  <div class="aside-topbar">
+    <button class="btn-new">+ Create ticket</button>
 
-  <!-- TOPBAR -->
-  <div class="topbar">
-    <div class="admin-crown"><i class="fa-solid fa-crown" style="font-size:11px"></i> ADMINISTRATOR</div>
-    <div class="aside-topbar">
-       <button class="btn-new">+ Create ticket</button>
+    <div class="links-pill" id="btn-logout"><i class="fa-solid fa-link"></i> Log Out</div>
 
-    <div class="links-pill"><i class="fa-solid fa-link"></i> Log Out</div>
 
     <div class="topbar-avatar"><img src="https://i.pravatar.cc/60?img=11" alt="Admin"></div>
+  </div>
+</div>
+
+<!-- KPIs -->
+<div class="kpis">
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--red)">3</div>
+    <div class="kpi-label">Esperando por mí</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--orange)">6</div>
+    <div class="kpi-label">Asignados a mí</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--blue)">2</div>
+    <div class="kpi-label">Aprobaciones</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--yellow)">2</div>
+    <div class="kpi-label">Tareas</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--purple)">0</div>
+    <div class="kpi-label">Sin asignar</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-num" style="background:var(--green)">✓</div>
+    <div class="kpi-label">Colaboraciones</div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-area">
+
+  <!-- TICKET TABLE -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Tickets</span>
+      <div class="search-small">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Buscar...">
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Application</th>
+            <th>Applicant</th>
+            <th>Technician</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
     </div>
   </div>
 
-  <!-- KPIs -->
-  <div class="kpis">
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--red)">3</div>
-      <div class="kpi-label">Esperando por mí</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--orange)">6</div>
-      <div class="kpi-label">Asignados a mí</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--blue)">2</div>
-      <div class="kpi-label">Aprobaciones</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--yellow)">2</div>
-      <div class="kpi-label">Tareas</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--purple)">0</div>
-      <div class="kpi-label">Sin asignar</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-num" style="background:var(--green)">✓</div>
-      <div class="kpi-label">Colaboraciones</div>
-    </div>
-  </div>
-
-  <!-- CONTENT -->
-  <div class="content-area">
-
-    <!-- TICKET TABLE -->
-    <div class="panel">
-      <div class="panel-header">
-        <span class="panel-title">Tickets</span>
-        <div class="search-small">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Buscar...">
-        </div>
-      </div>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Application</th>
-              <th>Applicant</th>
-              <th>Technician</th>
-              <th>Priority</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="tbody">
-
-          </tbody>
-        </table>
-      </div>
-    </div>
+   
 
     <!-- SIDE PANEL -->
     <div class="side-panel">
@@ -81,6 +83,6 @@
         <div id="table-tech" style="overflow-y:auto; flex:1;"></div>
       </div>
     </div>
-
   </div>
 
+</div>
