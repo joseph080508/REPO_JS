@@ -2,14 +2,10 @@ import { createElement, Pencil } from "lucide";
 
 const iconSVG = (icon, attrs = {}) => createElement(icon, attrs).outerHTML;
 
-export function ticketCard(ticket) {
-    const isClosed = ticket.status === "closed" || ticket.status === "cerrado" || ticket.status === "Solved" || ticket.status === "Solucionado";
-    const canEdit = !ticket.Technician || isClosed;
-    const editButton = canEdit ? `<button class="action-btn edit" data-ticket-id="${ticket.id}" title="Editar">${iconSVG(Pencil)}</button>` : "";
-
+export function ticketTechCard(ticket) {
     return `<article class="ticket-card">
             <header class="card-header">
-                <span class="tag tag-red">D. COVERDALE</span>
+                <span class="tag tag-red">${ticket.caseType}</span>
                 <span class="priority priority-urgent">${ticket.priority}</span>
             </header>
 
@@ -18,13 +14,13 @@ export function ticketCard(ticket) {
 
             <footer class="card-footer">
             <address class="requester">
-                <img src="../img/perfil.png" alt="Erica Johnson">
+                <img src="../img/perfil.png" alt="">
                 <p>
                 <strong class="req-name">${ticket.requestingClient}</strong>
                 </p>
             </address>
             <div class="action-btns">
-                ${editButton}
+                <button class="action-btn edit" data-ticket-id="${ticket.id}" title="Editar">${iconSVG(Pencil)}</button>
                 <span class="ticket-id">tk${ticket.id}</span>
             </div>
             </footer>

@@ -1,10 +1,12 @@
 import { loginEvent, renderLogin } from "../pages/login.js";
 import { renderAdmin } from "../pages/admin.js";
 import { renderUser } from "../pages/user.js";
+import { renderTech } from "../pages/tech.js";
 
 const Routes ={
     "/": {view:renderLogin, vewEvent:loginEvent},
     "/dashboard/admin":{view:renderAdmin},
+    "/dashboard/tech":{view:renderTech},
     "/dashboard/client":{view:renderUser}
 }
 

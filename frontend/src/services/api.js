@@ -23,6 +23,17 @@ export async function getTicketsById(id) {
     }
 }
 
+export async function getTicketsByTechnician(name) {
+    try {
+        const response = await dataClient.get(`/tickets?Technician=${name}`);
+        return response.data|| [];
+
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}
+
 export async function postTicket(ticket) {
       try {
         const response = await dataClient.post(`/tickets`,ticket);
@@ -78,6 +89,9 @@ export async function updateTicket(ticketId, newTicketData) {
         ticketData.description = newTicketData.description;
         ticketData.priority = newTicketData.priority;
         ticketData.caseType = newTicketData.caseType;
+        if (newTicketData.status) {
+            ticketData.status = newTicketData.status;
+        }
         
         const response = await dataClient.put(`/tickets/${ticketId}`, ticketData);
         return response.data;

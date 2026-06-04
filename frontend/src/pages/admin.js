@@ -11,7 +11,7 @@ export async function renderAdmin(){
     const container = document.getElementById("app");
     container.innerHTML = await loadHTML('/src/views/admin.html');
     renderTicketsToAdmin()
-    await initModalTicket()
+    await initModalTicket(renderTicketsToAdmin)
     attachDelete()
     await initModalTicketTech()
 }

@@ -2,7 +2,7 @@
   "tickets": [
     {
       "id": "2",
-      "ticketName": "New User Creation Request",
+      "ticketName": "New User Creatio",
       "caseType": "request",
       "description": "A new user account is requested for a recently hired employe",
       "priority": "Imperative",
@@ -45,59 +45,81 @@
       "id": "VEyyKlbdyJI"
     },
     {
-      "ticketName": "jose",
-      "description": "dendjenfjrnjfr",
+      "ticketName": "New User Creatio",
+      "description": "A new user account is requested for a recently hired employe",
       "priority": "Imperative",
-      "caseType": "incident",
-      "Technician": "Daniel",
-      "status": "In Progress",
-      "UserId": "1",
-      "requestingClient": "felipe",
-      "id": "T8MNy6GnF5E"
-    },
-    {
-      "ticketName": "hhhh",
-      "description": "dddd",
-      "priority": "Medium",
-      "caseType": "incident",
+      "caseType": "request",
       "Technician": "luis",
       "status": "In Progress",
-      "UserId": "1",
-      "requestingClient": "felipe",
-      "id": "ovwMQdw-9dQ"
+      "UserId": "2",
+      "requestingClient": "luis",
+      "id": "8xX3B-kgfag"
     },
     {
-      "ticketName": "papa",
-      "description": "dcd",
-      "priority": "Medium",
-      "caseType": "incident",
+      "ticketName": "New User Creatiom",
+      "description": "A new user account is requested for a recently hired employe",
+      "priority": "Imperative",
+      "caseType": "request",
       "Technician": "luis",
       "status": "In Progress",
-      "UserId": "1",
-      "requestingClient": "felipe",
-      "id": "skSFCKu8Vk0"
-    },
-    {
-      "ticketName": "antonio",
-      "description": "cddvdvfvf",
-      "priority": "Medium",
-      "caseType": "incident",
-      "Technician": "Daniel",
-      "status": "In Progress",
-      "UserId": "1",
-      "requestingClient": "felipe",
-      "id": "gVMsmz-NSZo"
+      "UserId": "2",
+      "requestingClient": "luis",
+      "id": "-X1evTrXw3A"
     },
     {
       "ticketName": "algo",
-      "description": "adwadw",
+      "description": "ago",
       "priority": "Imperative",
+      "caseType": "incident",
+      "Technician": "luis",
+      "status": "In Progress",
+      "UserId": "2",
+      "requestingClient": "luis",
+      "id": "AvdU8dhKF5Y"
+    },
+    {
+      "ticketName": "algo",
+      "description": "algo",
+      "priority": "Imperative",
+      "caseType": "incident",
+      "Technician": "luis",
+      "status": "In Progress",
+      "UserId": "2",
+      "requestingClient": "luis",
+      "id": "x_x-R21alYc"
+    },
+    {
+      "ticketName": "Client Test Ticket",
+      "description": "Ticket created to test the normal user view.",
+      "priority": "Medium",
       "caseType": "incident",
       "Technician": "",
       "status": "In Progress",
-      "UserId": "1",
-      "requestingClient": "felipe",
-      "id": "vjsFmnj-_hE"
+      "UserId": "3",
+      "requestingClient": "mateo",
+      "id": "client-test-001"
+    },
+    {
+      "ticketName": "algo",
+      "description": "algo",
+      "priority": "high",
+      "caseType": "incident",
+      "Technician": "mateo",
+      "status": "In Progress",
+      "UserId": "3",
+      "requestingClient": "mateo",
+      "id": "cMEYP-MbB6s"
+    },
+    {
+      "ticketName": "algo",
+      "description": "algo",
+      "priority": "high",
+      "caseType": "incident",
+      "Technician": "mateo",
+      "status": "Assigned",
+      "UserId": "3",
+      "requestingClient": "mateo",
+      "id": "ALYKaf5TKKc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
