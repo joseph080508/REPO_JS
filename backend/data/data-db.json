@@ -5,8 +5,8 @@
             "ticketName": "Billing System Access Error",
             "caseType": "incident",
             "description": "The user cannot log in to the billing system due to an authentication error.",
-            "assignedTechnician": "Carlos Gomez",
-            "createdByUserId": 101,
+            "Technician": "Carlos Gomez",
+            "UserId": 1,
             "requestingClient": "Maria Rodriguez"
         },
         {
@@ -14,9 +14,18 @@
             "ticketName": "New User Creation Request",
             "caseType": "request",
             "description": "A new user account is requested for a recently hired employee.",
-            "assignedTechnician": "Ana Martinez",
-            "createdByUserId": 102,
+            "Technician": "Ana Martinez",
+            "UserId": 2,
             "requestingClient": "Juan Perez"
+        },
+        {
+            "id": 3,
+            "ticketName": "VPN Connection Problem",
+            "caseType": "support",
+            "description": "The user is unable to connect to the company VPN while working remotely.",
+            "Technician": null,
+            "UserId": 3,
+            "requestingClient": "Maria Rodriguez"
         }
     ]
 }

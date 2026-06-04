@@ -1,0 +1,58 @@
+<!-- MODAL CREAR TICKET -->
+<dialog class="modal-overlay" id="modal-ticket">
+  <article class="modal">
+
+    <header class="modal-header">
+      <h2 class="modal-title">Nueva solicitud</h2>
+      <button class="modal-close" id="modal-close" aria-label="Cerrar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </header>
+
+    <form class="modal-form" id="form-ticket">
+
+      <fieldset class="form-group">
+        <label for="ticket-titulo">Título</label>
+        <input type="text" id="ticket-titulo" placeholder="Ej. Problema con acceso al sistema" required>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="ticket-desc">Descripción</label>
+        <textarea id="ticket-desc" rows="4" placeholder="Describe el problema o solicitud..."></textarea>
+      </fieldset>
+
+      <div class="form-row">
+
+        <fieldset class="form-group">
+          <label for="ticket-prioridad">Prioridad</label>
+          <select id="ticket-prioridad">
+            <option value="">Seleccionar...</option>
+            <option value="urgente">Urgente</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="ticket-categoria">Categoría / Área</label>
+          <select id="ticket-categoria">
+            <option value="">Seleccionar...</option>
+            <option value="hr">Human Resources</option>
+            <option value="it">IT</option>
+            <option value="transfer">Employee Transfer</option>
+            <option value="general">General Inquiries</option>
+          </select>
+        </fieldset>
+
+      </div>
+
+      <footer class="modal-footer">
+        <button type="button" class="btn-cancel" id="btn-cancel">Cancelar</button>
+        <button type="submit" class="btn-submit">Crear ticket</button>
+      </footer>
+
+    </form>
+
+  </article>
+</dialog>

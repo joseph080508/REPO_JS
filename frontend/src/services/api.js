@@ -11,3 +11,14 @@ export async function getTickets() {
         return [];
     }
 }
+
+export async function getTicketsById(id) {
+    try {
+        const response = await dataClient.get(`/tickets?UserId=${id}`);
+        return response.data|| [];
+
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}
