@@ -1,22 +1,11 @@
 {
   "tickets": [
     {
-      "id": "1",
-      "ticketName": "Billing System Access Error",
-      "caseType": "incident",
-      "description": "The user cannot log in to the billing system due to an authentication error.",
-      "priority": "imperative",
-      "status": "In Progress",
-      "Technician": "luis",
-      "UserId": 1,
-      "requestingClient": "Maria Rodriguez"
-    },
-    {
       "id": "2",
       "ticketName": "New User Creation Request",
       "caseType": "request",
-      "description": "A new user account is requested for a recently hired employee.",
-      "priority": "medium",
+      "description": "A new user account is requested for a recently hired employe",
+      "priority": "Imperative",
       "status": "In Progress",
       "Technician": "Ana Martinez",
       "UserId": 2,
@@ -98,6 +87,17 @@
       "UserId": "1",
       "requestingClient": "felipe",
       "id": "gVMsmz-NSZo"
+    },
+    {
+      "ticketName": "algo",
+      "description": "adwadw",
+      "priority": "Imperative",
+      "caseType": "incident",
+      "Technician": "",
+      "status": "In Progress",
+      "UserId": "1",
+      "requestingClient": "felipe",
+      "id": "vjsFmnj-_hE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
