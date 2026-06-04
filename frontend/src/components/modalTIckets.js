@@ -15,4 +15,7 @@ export async function initModalTicket() {
   btnNew   .addEventListener('click', () => modal.showModal());
   btnClose .addEventListener('click', () => modal.close());
   btnCancel.addEventListener('click', () => modal.close());
+
+
+  
 }

@@ -2,6 +2,8 @@ import { getTickets } from "../services/api.js";
 import { loadHTML } from "../utils/loadHtml.js";
 import {ticketTr} from "../components/ticketTr.js"
 import { initModalTicket } from "../components/modalTIckets.js";
+import { initModalTicketTech } from "../components/modaladdTech.js";
+import { addTech } from "../components/tecnicos.js";
 
 
 export async function renderAdmin(){
@@ -9,9 +11,10 @@ export async function renderAdmin(){
     container.innerHTML = await loadHTML('/src/views/admin.html');
     renderTicketsToAdmin()
     await initModalTicket()
+    await initModalTicketTech()
 }
 
-async function renderTicketsToAdmin() {
+export async function renderTicketsToAdmin() {
     const container = document.getElementById("tbody")
     const tickets = await getTickets();
     container.innerHTML = tickets.map(ticket => ticketTr(ticket)).join('');
