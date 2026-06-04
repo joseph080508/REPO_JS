@@ -2,12 +2,10 @@ import { initModalTicket } from "../components/modalTIckets.js";
 import { ticketCard } from "../components/ticketCard.js";
 import { getTicketsById } from "../services/api.js";
 import { loadHTML } from "../utils/loadHtml.js";
-import { createIcons, icons, User } from "lucide";
 
 export async function renderUser(){
     const container = document.getElementById("app");
     container.innerHTML = await loadHTML('/src/views/user.html');
-    createIcons({ icons });
     renderTickets()
     await initModalTicket();
     const form = document.getElementById("form-ticket")

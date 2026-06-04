@@ -1,6 +1,5 @@
 import { getTickets } from "../services/api.js";
 import { loadHTML } from "../utils/loadHtml.js";
-import { createIcons, icons } from "lucide";
 import {ticketTr} from "../components/ticketTr.js"
 import { initModalTicket } from "../components/modalTIckets.js";
 
@@ -8,7 +7,6 @@ import { initModalTicket } from "../components/modalTIckets.js";
 export async function renderAdmin(){
     const container = document.getElementById("app");
     container.innerHTML = await loadHTML('/src/views/admin.html');
-    createIcons({ icons });
     renderTicketsToAdmin()
     await initModalTicket()
 }
