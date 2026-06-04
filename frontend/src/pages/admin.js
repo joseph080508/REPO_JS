@@ -3,6 +3,8 @@ import { loadHTML } from "../utils/loadHtml.js";
 import { createIcons, icons } from "lucide";
 import {ticketTr} from "../components/ticketTr.js"
 import { initModalTicket } from "../components/modalTIckets.js";
+import { initModalTicketTech } from "../components/modaladdTech.js";
+import { addTech } from "../components/tecnicos.js";
 
 
 export async function renderAdmin(){
@@ -11,8 +13,8 @@ export async function renderAdmin(){
     createIcons({ icons });
     renderTicketsToAdmin()
     await initModalTicket()
+    await initModalTicketTech()
 }
-
 
 export async function renderTicketsToAdmin() {
     const container = document.getElementById("tbody")

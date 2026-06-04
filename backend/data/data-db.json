@@ -7,7 +7,7 @@
       "description": "The user cannot log in to the billing system due to an authentication error.",
       "priority": "imperative",
       "status": "In Progress",
-      "Technician": "Carlos Gomez",
+      "Technician": "luis",
       "UserId": 1,
       "requestingClient": "Maria Rodriguez"
     },
@@ -29,7 +29,7 @@
       "description": "The user is unable to connect to the company VPN while working remotely.",
       "priority": "low",
       "status": "In Progress",
-      "Technician": "",
+      "Technician": "Daniel",
       "UserId": 3,
       "requestingClient": "Maria Rodriguez"
     },
@@ -65,6 +65,17 @@
       "UserId": "1",
       "requestingClient": "felipe",
       "id": "BmSC4cbeGZE"
+    },
+    {
+      "ticketName": "jose",
+      "description": "dendjenfjrnjfr",
+      "priority": "Imperative",
+      "caseType": "incident",
+      "Technician": "",
+      "status": "In Progress",
+      "UserId": "1",
+      "requestingClient": "felipe",
+      "id": "T8MNy6GnF5E"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

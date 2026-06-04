@@ -26,7 +26,7 @@ export function ticketTr(ticket) {
               <td>
                 <div class="action-btns">
                   <button class="action-btn edit" title="Editar">${iconSVG(Pencil)}  </button>
-                  <button class="action-btn assign" title="Asignar técnico">${iconSVG(UserRoundPlus)}</button>
+                  <button class="action-btn assign" data-ticket-id="${ticket.id}" title="Asignar técnico">${iconSVG(UserRoundPlus)}</button>
                   <button class="action-btn del" title="Eliminar">${iconSVG(Trash2)}  </button>
                 </div>
               </td>
