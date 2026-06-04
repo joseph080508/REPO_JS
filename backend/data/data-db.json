@@ -49,33 +49,55 @@
       "description": "cdcdcdcd",
       "priority": "high",
       "caseType": "incident",
-      "Technician": "",
+      "Technician": "Daniel",
       "status": "In Progress",
       "UserId": "1",
       "requestingClient": "felipe",
       "id": "VEyyKlbdyJI"
     },
     {
-      "ticketName": "neioijgijojrojijtrjgiotj",
-      "description": "jjjjjj",
-      "priority": "Imperative",
-      "caseType": "incident",
-      "Technician": "",
-      "status": "In Progress",
-      "UserId": "1",
-      "requestingClient": "felipe",
-      "id": "BmSC4cbeGZE"
-    },
-    {
       "ticketName": "jose",
       "description": "dendjenfjrnjfr",
       "priority": "Imperative",
       "caseType": "incident",
-      "Technician": "",
+      "Technician": "Daniel",
       "status": "In Progress",
       "UserId": "1",
       "requestingClient": "felipe",
       "id": "T8MNy6GnF5E"
+    },
+    {
+      "ticketName": "hhhh",
+      "description": "dddd",
+      "priority": "Medium",
+      "caseType": "incident",
+      "Technician": "luis",
+      "status": "In Progress",
+      "UserId": "1",
+      "requestingClient": "felipe",
+      "id": "ovwMQdw-9dQ"
+    },
+    {
+      "ticketName": "papa",
+      "description": "dcd",
+      "priority": "Medium",
+      "caseType": "incident",
+      "Technician": "luis",
+      "status": "In Progress",
+      "UserId": "1",
+      "requestingClient": "felipe",
+      "id": "skSFCKu8Vk0"
+    },
+    {
+      "ticketName": "antonio",
+      "description": "cddvdvfvf",
+      "priority": "Medium",
+      "caseType": "incident",
+      "Technician": "Daniel",
+      "status": "In Progress",
+      "UserId": "1",
+      "requestingClient": "felipe",
+      "id": "gVMsmz-NSZo"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
