@@ -1,17 +1,6 @@
 {
   "tickets": [
     {
-      "id": "2",
-      "ticketName": "New User Creation Request",
-      "caseType": "request",
-      "description": "A new user account is requested for a recently hired employe",
-      "priority": "Imperative",
-      "status": "In Progress",
-      "Technician": "Ana Martinez",
-      "UserId": 2,
-      "requestingClient": "Juan Perez"
-    },
-    {
       "id": "3",
       "ticketName": "VPN Connection Problem",
       "caseType": "support",
@@ -78,15 +67,15 @@
       "id": "gVMsmz-NSZo"
     },
     {
-      "ticketName": "algo",
-      "description": "adwadw",
-      "priority": "Imperative",
-      "caseType": "incident",
+      "ticketName": "asdasd",
+      "description": "asdasdasd",
+      "priority": "Medium",
+      "caseType": "dasdasdasd",
       "Technician": "",
       "status": "In Progress",
       "UserId": "1",
       "requestingClient": "felipe",
-      "id": "vjsFmnj-_hE"
+      "id": "TRsS9T3BXkY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

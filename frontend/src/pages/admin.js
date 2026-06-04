@@ -5,6 +5,8 @@ import { initModalTicket } from "../components/modalTIckets.js";
 import { initModalTicketTech } from "../components/modaladdTech.js";
 import { addTech } from "../components/tecnicos.js";
 import { deleteTicket } from "../services/api.js";
+import { clearSession } from "../store/session.js";
+
 
 
 export async function renderAdmin(){
@@ -14,6 +16,7 @@ export async function renderAdmin(){
     await initModalTicket(renderTicketsToAdmin)
     attachDelete()
     await initModalTicketTech()
+    attachLogout();
 }
 
 export async function renderTicketsToAdmin() {
@@ -46,4 +49,13 @@ async function oneDeleteClick(event) {
         console.error(error);
         alert("Error deleting the ticket.");
     }
+}
+
+function attachLogout() {
+    const logoutButton = document.querySelector(".links-pill");
+    if (!logoutButton) return;
+
+    logoutButton.addEventListener("click", () => {
+        clearSession();
+    });
 }
