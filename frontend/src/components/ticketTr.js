@@ -1,6 +1,8 @@
+import { createElement, Pencil, UserRoundPlus, Trash2 } from "lucide";
+
+const iconSVG = (icon, attrs = {}) => createElement(icon, attrs).outerHTML;
 
 export function ticketTr(ticket) {
-
     return `<tr>
               <td><span class="ticket-id">tk${ticket.id}</span></td>
               <td>
@@ -23,9 +25,9 @@ export function ticketTr(ticket) {
               <td><span class="badge badge-orange"><span class="status-dot" style="background:var(--orange)"></span>${ticket.status}</span></td>
               <td>
                 <div class="action-btns">
-                  <button class="action-btn edit" title="Editar"><i data-lucide="pencil"></i>  </button>
-                  <button class="action-btn assign" title="Asignar técnico"><i data-lucide="user-round-plus"></i></button>
-                  <button class="action-btn del" title="Eliminar"><i data-lucide="trash-2"></i></i>  </button>
+                  <button class="action-btn edit" title="Editar">${iconSVG(Pencil)}  </button>
+                  <button class="action-btn assign" title="Asignar técnico">${iconSVG(UserRoundPlus)}</button>
+                  <button class="action-btn del" title="Eliminar">${iconSVG(Trash2)}  </button>
                 </div>
               </td>
             </tr>`
