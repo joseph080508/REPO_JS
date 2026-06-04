@@ -1,6 +1,6 @@
 
 export function ticketTr(ticket) {
-  
+
     return `<tr>
               <td><span class="ticket-id">tk${ticket.id}</span></td>
               <td>
@@ -19,8 +19,8 @@ export function ticketTr(ticket) {
                   <span class="tech-name">${ticket.Technician}</span>
                 </div>
               </td>
-              <td><span class="badge badge-red">Urgente</span></td>
-              <td><span class="badge badge-orange"><span class="status-dot" style="background:var(--orange)"></span>En proceso</span></td>
+              <td><span class="badge badge-red">${ticket.priority}</span></td>
+              <td><span class="badge badge-orange"><span class="status-dot" style="background:var(--orange)"></span>${ticket.status}</span></td>
               <td>
                 <div class="action-btns">
                   <button class="action-btn edit" title="Editar"><i data-lucide="pencil"></i>  </button>

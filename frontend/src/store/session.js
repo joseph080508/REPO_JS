@@ -20,6 +20,7 @@ export function getSession(){
 export function clearSession(){
     localStorage.removeItem('user')
     clearTimeout(inactivityTimer)
+    navigateTo("/")
 }
 
 function startInactivityTimer(){

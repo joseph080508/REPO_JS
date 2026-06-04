@@ -10,6 +10,7 @@ export async function renderUser(){
     createIcons({ icons });
     renderTickets()
     await initModalTicket();
+    const form = document.getElementById("form-ticket")
 }
 
 async function renderTickets() {

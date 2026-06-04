@@ -23,6 +23,14 @@
             "password": 123,
             "role": "client",
             "isActive": true
+        },
+        {
+            "id": "4",
+            "name": "Daniel",
+            "email": "daniel@test.com",
+            "password": 123,
+            "role": "tech",
+            "isActive": true
         }
     ]
 }

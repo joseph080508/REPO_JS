@@ -5,6 +5,8 @@
             "ticketName": "Billing System Access Error",
             "caseType": "incident",
             "description": "The user cannot log in to the billing system due to an authentication error.",
+            "priority": "imperative",
+            "status":  "In Progress",
             "Technician": "Carlos Gomez",
             "UserId": 1,
             "requestingClient": "Maria Rodriguez"
@@ -14,6 +16,8 @@
             "ticketName": "New User Creation Request",
             "caseType": "request",
             "description": "A new user account is requested for a recently hired employee.",
+            "priority": "medium",
+            "status": "In Progress",
             "Technician": "Ana Martinez",
             "UserId": 2,
             "requestingClient": "Juan Perez"
@@ -23,6 +27,8 @@
             "ticketName": "VPN Connection Problem",
             "caseType": "support",
             "description": "The user is unable to connect to the company VPN while working remotely.",
+            "priority": "low",
+            "status":  "In Progress",
             "Technician": null,
             "UserId": 3,
             "requestingClient": "Maria Rodriguez"

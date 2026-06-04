@@ -3,7 +3,7 @@
   <article class="modal">
 
     <header class="modal-header">
-      <h2 class="modal-title">Nueva solicitud</h2>
+      <h2 class="modal-title">New Ticket</h2>
       <button class="modal-close" id="modal-close" aria-label="Cerrar">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -12,44 +12,38 @@
     <form class="modal-form" id="form-ticket">
 
       <fieldset class="form-group">
-        <label for="ticket-titulo">Título</label>
-        <input type="text" id="ticket-titulo" placeholder="Ej. Problema con acceso al sistema" required>
+        <label for="ticket-titulo">Title</label>
+        <input type="text" id="ticket-titulo" placeholder="Enter the ticket title" required>
       </fieldset>
 
       <fieldset class="form-group">
-        <label for="ticket-desc">Descripción</label>
-        <textarea id="ticket-desc" rows="4" placeholder="Describe el problema o solicitud..."></textarea>
+        <label for="ticket-desc">Description</label>
+        <textarea id="ticket-desc" rows="4" placeholder="Describe the problem or request"></textarea>
       </fieldset>
 
       <div class="form-row">
 
         <fieldset class="form-group">
-          <label for="ticket-prioridad">Prioridad</label>
+          <label for="ticket-prioridad">Priority</label>
           <select id="ticket-prioridad">
-            <option value="">Seleccionar...</option>
-            <option value="urgente">Urgente</option>
-            <option value="alta">Alta</option>
-            <option value="media">Media</option>
-            <option value="baja">Baja</option>
+            <option value="">Select...</option>
+            <option value="urgente">Imperative</option>
+            <option value="alta">high</option>
+            <option value="media">Medium</option>
+            <option value="baja">Low</option>
           </select>
         </fieldset>
 
         <fieldset class="form-group">
-          <label for="ticket-categoria">Categoría / Área</label>
-          <select id="ticket-categoria">
-            <option value="">Seleccionar...</option>
-            <option value="hr">Human Resources</option>
-            <option value="it">IT</option>
-            <option value="transfer">Employee Transfer</option>
-            <option value="general">General Inquiries</option>
-          </select>
+          <label for="ticket-categoria">Case Type</label>
+           <input type="text" id="ticket-type" placeholder="e.g: incident, request, support" required>
         </fieldset>
 
       </div>
 
       <footer class="modal-footer">
-        <button type="button" class="btn-cancel" id="btn-cancel">Cancelar</button>
-        <button type="submit" class="btn-submit">Crear ticket</button>
+        <button type="button" class="btn-cancel" id="btn-cancel">Cancel</button>
+        <button type="submit" class="btn-submit">Create a Ticket</button>
       </footer>
 
     </form>

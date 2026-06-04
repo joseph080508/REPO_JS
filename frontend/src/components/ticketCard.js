@@ -3,7 +3,7 @@ export function ticketCard(ticket) {
     return `<article class="ticket-card">
             <header class="card-header">
                 <span class="tag tag-red">D. COVERDALE</span>
-                <span class="priority priority-urgent">Urgente</span>
+                <span class="priority priority-urgent">${ticket.priority}</span>
             </header>
 
             <h3 class="card-title">${ticket.ticketName}</h3>
