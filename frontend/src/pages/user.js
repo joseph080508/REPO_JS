@@ -11,6 +11,7 @@ export async function renderUser(){
     renderTickets()
     await initModalTicket();
     const form = document.getElementById("form-ticket")
+    console.log(form)
 }
 
 async function renderTickets() {
