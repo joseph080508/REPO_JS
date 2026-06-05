@@ -1,0 +1,9 @@
+import createReservationView from "@/views/createReservationView";
+import editReservationView from "@/views/editReservationView";
+
+const routes = {
+  "/": loginView,
+  "/home": homeView,
+  "/create-reservation": createReservationView,
+  "/edit-reservation": editReservationView,
+};
