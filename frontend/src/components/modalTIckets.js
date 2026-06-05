@@ -25,8 +25,8 @@ export async function initModalTicket(refreshTickets) {
 
     ticketIdActual = null;
     form.reset();
-    modalTitle.textContent = "New Ticket";
-    btnSubmit.textContent = "Create a Ticket";
+    modalTitle.textContent = "Nueva reserva";
+    btnSubmit.textContent = "Crear reserva";
     statusSelect.value = "In Progress";
     showStatusByRole(user);
     modal.showModal();
@@ -58,10 +58,12 @@ export async function initModalTicket(refreshTickets) {
 
       document.getElementById("ticket-title").value = ticket.ticketName;
       document.getElementById("ticket-desc").value = ticket.description;
+      document.getElementById("reservation-date").value = ticket.reservationDate || "";
+      document.getElementById("reservation-time").value = ticket.reservationTime || "";
       document.getElementById("ticket-prioridad").value = ticket.priority;
       document.getElementById("ticket-type").value = ticket.caseType;
-      modalTitle.textContent = "Update Ticket";
-      btnSubmit.textContent = "Update Ticket";
+      modalTitle.textContent = "Actualizar reserva";
+      btnSubmit.textContent = "Actualizar reserva";
       statusSelect.value = ticket.status;
       showStatusByRole(user);
 
@@ -77,6 +79,8 @@ export async function initModalTicket(refreshTickets) {
     const ticket = {
        ticketName: document.getElementById("ticket-title").value,
        description : document.getElementById("ticket-desc").value,
+       reservationDate: document.getElementById("reservation-date").value,
+       reservationTime: document.getElementById("reservation-time").value,
        priority : document.getElementById("ticket-prioridad").value,
        caseType : document.getElementById("ticket-type").value,
        Technician: user.role === "tech" ? user.name : "",

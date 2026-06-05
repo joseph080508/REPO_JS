@@ -18,7 +18,7 @@ export function ticketCard(ticket) {
 
             <h3 class="card-title">${ticket.ticketName}</h3>
             <p class="card-cat">${ticket.description}</p>
-
+            <p class="card-meta">Fecha: ${ticket.reservationDate || '-'} · Hora: ${ticket.reservationTime || '-'}</p>
             <footer class="card-footer">
             <address class="requester">
                 <img src="../img/perfil.png" alt="Erica Johnson">

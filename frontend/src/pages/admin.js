@@ -59,6 +59,8 @@ function filterTickets(tickets, search) {
             ticket.priority,
             ticket.status,
             ticket.caseType,
+            ticket.reservationDate,
+            ticket.reservationTime,
         ].some((value) => String(value ?? "").toLowerCase().includes(normalizedSearch));
     });
 }

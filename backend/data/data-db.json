@@ -3,6 +3,8 @@
     {
       "id": "2",
       "ticketName": "New User Creatio",
+      "reservationDate": "2026-06-15",
+      "reservationTime": "10:30",
       "caseType": "request",
       "description": "A new user account is requested for a recently hired employe",
       "priority": "high",
@@ -14,6 +16,8 @@
     {
       "id": "3",
       "ticketName": "VPN Connection Problem",
+      "reservationDate": "2026-06-16",
+      "reservationTime": "14:00",
       "caseType": "support",
       "description": "The user is unable to connect to the company VPN while working remotely.",
       "priority": "low",
@@ -24,6 +28,8 @@
     },
     {
       "ticketName": "Printer Not Responding",
+      "reservationDate": "2026-06-17",
+      "reservationTime": "09:00",
       "description": "cdcdcdcd",
       "priority": "high",
       "caseType": "incident",
@@ -35,6 +41,8 @@
     },
     {
       "ticketName": "Printer Not Responding",
+      "reservationDate": "2026-06-18",
+      "reservationTime": "11:00",
       "description": "cdcdcdcd",
       "priority": "high",
       "caseType": "incident",

@@ -1,6 +1,6 @@
-# Tickets Management System
+# Reservations Management System
 
-A web application for managing support tickets. It allows users to log in based on their role, view tickets, create new requests, and assign technicians using a simulated backend powered by `json-server`.
+A web application for managing reservations. It supports role-based login, reservation creation, date/time scheduling, technician assignment, and reservation tracking with a simulated backend powered by `json-server`.
 
 ## Technologies
 
@@ -68,7 +68,7 @@ VITE_TIMEOUT=5000
 
 ## Running the Application
 
-You must start three separate processes in different terminal windows.
+Start three separate processes:
 
 Authentication server:
 
@@ -131,20 +131,88 @@ npm run build
 npm run preview
 ```
 
+## Data Model
+
+Each reservation record includes the following fields:
+
+* `id` — unique reservation identifier
+* `ticketName` — reservation title
+* `description` — reservation details
+* `reservationDate` — scheduled date (`YYYY-MM-DD`)
+* `reservationTime` — scheduled time (`HH:MM`)
+* `priority` — urgency level
+* `caseType` — reservation type or category
+* `status` — reservation status
+* `Technician` — assigned technician name
+* `UserId` — user id of the creator
+* `requestingClient` — name of the requesting user
+
 ## Features
 
-* Role-based authentication
-* Session persistence using `localStorage`
-* Logout functionality
-* Inactivity timeout
-* Ticket listing for administrators
-* Ticket listing by client
-* Ticket creation
-* Technician assignment to tickets
-* Ticket deletion
+* Role-based authentication and access control
+* Reservation creation and editing
+* Reservation date and time fields
+* Reservation listing for admin, client, and technician views
+* Search by reservation name, description, client, technician, status, type, date, or time
+* Reservation assignment to technicians
+* Reservation deletion
+
+## What Changed
+
+### Frontend
+
+* `frontend/src/views/modalTicket.html`
+  * Updated labels from tickets to reservations
+  * Added `reservationDate` and `reservationTime` fields
+
+* `frontend/src/components/modalTIckets.js`
+  * Sends `reservationDate` and `reservationTime` when creating or updating reservations
+  * Loads reservation date/time values when editing
+
+* `frontend/src/components/ticketTr.js`
+  * Displays reservation date and time in the admin table
+
+* `frontend/src/components/ticketCard.js`
+  * Shows reservation date/time for client cards
+
+* `frontend/src/components/ticketTechCard.js`
+  * Shows reservation date/time for technician cards
+
+* `frontend/src/pages/admin.js`, `frontend/src/pages/user.js`, `frontend/src/pages/tech.js`
+  * Search now includes reservation date and time fields
+
+### Backend
+
+* `backend/data/data-db.json`
+  * Added sample reservation records with `reservationDate` and `reservationTime`
+
+## Upload to GitHub
+
+If you want to push this project to your new repository, use these commands from the project root:
+
+```bash
+git init
+# if origin already exists, remove it first:
+# git remote remove origin
+
+git remote add origin https://github.com/joseph080508/REPO_JS.git
+git branch -M main
+git add .
+git commit -m "Add reservation management with date/time support and documentation"
+git push -u origin main
+```
+
+If the repo already exists locally, simply update the remote and push:
+
+```bash
+git remote set-url origin https://github.com/joseph080508/REPO_JS.git
+git add .
+git commit -m "Document reservation changes and add docs"
+git push
+```
 
 ## Development Notes
 
-* The backend is simulated. Data is stored directly in JSON files.
-* To allow the frontend to read the API URLs, the environment variables must be defined in `frontend/.env`.
-* If you are using PowerShell and `npm` is blocked by execution policies, you can run the commands using `npm.cmd`.
+* The backend is simulated with `json-server`; data is stored in JSON files.
+* `frontend/.env` must define the API URLs for the auth and data servers.
+* Use `npm run build` in `frontend` to validate production readiness.

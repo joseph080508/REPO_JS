@@ -3,7 +3,7 @@ import { createElement, Pencil, UserRoundPlus, Trash2 } from "lucide";
 // Convierte iconos de lucide en SVG para usarlos dentro de botones.
 const iconSVG = (icon, attrs = {}) => createElement(icon, attrs).outerHTML;
 
-// Renderiza una fila de la tabla de tickets del administrador.
+// Renderiza una fila de la tabla de reservas del administrador.
 export function ticketTr(ticket) {
     return `<tr>
               <td><span class="ticket-id">tk${ticket.id}</span></td>
@@ -17,6 +17,8 @@ export function ticketTr(ticket) {
                   <div class="name">${ticket.requestingClient}</div>
                 </div>
               </td>
+              <td>${ticket.reservationDate || '-'}</td>
+              <td>${ticket.reservationTime || '-'}</td>
               <td>
                 <div class="tech-wrap">
                   <img src="../img/perfil.png" alt="">
